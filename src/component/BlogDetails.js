@@ -24,7 +24,7 @@ const BlogDetails = () => {
           <h2 className="article-title">{ blog.title }</h2>
           <p className="article-author">written by: { blog.author }</p>
           <pre className="article-body">{ blog.body }</pre>
-          <button className="article-delete" onClick={handleDelete}>Delete</button>
+          {!blog.isRequired && <button className="article-delete" onClick={handleDelete}>Delete</button>}
         </article>
       )}
     </div>
